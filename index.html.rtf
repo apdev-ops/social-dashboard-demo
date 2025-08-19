@@ -1,0 +1,201 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Social Media Stats Dashboard</title>\
+    <!-- Tailwind CSS for styling -->\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <!-- Font Awesome for icons -->\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\
+    <!-- Google Fonts: Inter -->\
+    <link rel="preconnect" href="https://fonts.googleapis.com">\
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">\
+    <style>\
+        /* Use the Inter font family */\
+        body \{\
+            font-family: 'Inter', sans-serif;\
+        \}\
+        /* Style for the active tab */\
+        .tab-btn.active \{\
+            background-color: #3B82F6; /* blue-500 */\
+            color: white;\
+        \}\
+    </style>\
+</head>\
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">\
+\
+    <div class="container mx-auto px-4 py-8 md:py-12">\
+        <!-- Header -->\
+        <header class="text-center mb-8 md:mb-12">\
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Your Social Media Overview</h1>\
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Last updated: Just now</p>\
+        </header>\
+\
+        <!-- Social Media Cards Grid -->\
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">\
+\
+            <!-- Twitter (X) Card - No change -->\
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">\
+                <div class="flex items-center justify-between">\
+                    <h2 class="text-xl font-semibold">Twitter</h2>\
+                    <i class="fab fa-twitter text-2xl text-blue-400"></i>\
+                </div>\
+                <div class="mt-6">\
+                    <p class="text-4xl font-bold">12.5K</p>\
+                    <p class="text-gray-500 dark:text-gray-400">Followers</p>\
+                </div>\
+                <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                    <div><p class="font-semibold">Posts</p><p>2,104</p></div>\
+                    <div><p class="font-semibold">Likes</p><p>34.2K</p></div>\
+                </div>\
+            </div>\
+\
+            <!-- Instagram Card with Tabs -->\
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">\
+                <div class="flex items-center justify-between mb-4">\
+                    <h2 class="text-xl font-semibold">Instagram</h2>\
+                    <i class="fab fa-instagram text-2xl text-pink-500"></i>\
+                </div>\
+                <!-- Tabs -->\
+                <div class="flex bg-gray-200 dark:bg-gray-700 rounded-lg p-1 mb-4 tab-container">\
+                    <button class="tab-btn active w-1/2 rounded-md py-1 text-sm font-medium" data-target="insta-personal">Personal</button>\
+                    <button class="tab-btn w-1/2 rounded-md py-1 text-sm font-medium" data-target="insta-business">Business</button>\
+                </div>\
+                <!-- Tab Content -->\
+                <div id="insta-personal" class="tab-content">\
+                    <div class="mt-2"><p class="text-4xl font-bold">28.1K</p><p class="text-gray-500 dark:text-gray-400">Followers</p></div>\
+                    <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                        <div><p class="font-semibold">Posts</p><p>852</p></div>\
+                        <div><p class="font-semibold">Avg. Likes</p><p>1.2K</p></div>\
+                    </div>\
+                </div>\
+                <div id="insta-business" class="tab-content hidden">\
+                    <div class="mt-2"><p class="text-4xl font-bold">15.3K</p><p class="text-gray-500 dark:text-gray-400">Page Followers</p></div>\
+                    <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                        <div><p class="font-semibold">Reach</p><p>1.1M</p></div>\
+                        <div><p class="font-semibold">Engagement</p><p>5.4%</p></div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- Facebook Card with Tabs -->\
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">\
+                <div class="flex items-center justify-between mb-4">\
+                    <h2 class="text-xl font-semibold">Facebook</h2>\
+                    <i class="fab fa-facebook-f text-2xl text-blue-600"></i>\
+                </div>\
+                <!-- Tabs -->\
+                <div class="flex bg-gray-200 dark:bg-gray-700 rounded-lg p-1 mb-4 tab-container">\
+                    <button class="tab-btn active w-1/2 rounded-md py-1 text-sm font-medium" data-target="fb-personal">Personal</button>\
+                    <button class="tab-btn w-1/2 rounded-md py-1 text-sm font-medium" data-target="fb-page">Page</button>\
+                </div>\
+                <!-- Tab Content -->\
+                <div id="fb-personal" class="tab-content">\
+                    <div class="mt-2"><p class="text-4xl font-bold">4,812</p><p class="text-gray-500 dark:text-gray-400">Friends</p></div>\
+                    <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                        <div><p class="font-semibold">Posts</p><p>1,430</p></div>\
+                        <div><p class="font-semibold">Reactions</p><p>21.3K</p></div>\
+                    </div>\
+                </div>\
+                <div id="fb-page" class="tab-content hidden">\
+                    <div class="mt-2"><p class="text-4xl font-bold">5,230</p><p class="text-gray-500 dark:text-gray-400">Page Likes</p></div>\
+                    <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                        <div><p class="font-semibold">Reach</p><p>850K</p></div>\
+                        <div><p class="font-semibold">Shares</p><p>8.9K</p></div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <!-- YouTube Card - No change -->\
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">\
+                <div class="flex items-center justify-between">\
+                    <h2 class="text-xl font-semibold">YouTube</h2>\
+                    <i class="fab fa-youtube text-2xl text-red-600"></i>\
+                </div>\
+                <div class="mt-6"><p class="text-4xl font-bold">8.7K</p><p class="text-gray-500 dark:text-gray-400">Subscribers</p></div>\
+                <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                    <div><p class="font-semibold">Videos</p><p>124</p></div>\
+                    <div><p class="font-semibold">Total Views</p><p>1.2M</p></div>\
+                </div>\
+            </div>\
+\
+            <!-- LinkedIn Card with Tabs -->\
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">\
+                <div class="flex items-center justify-between mb-4">\
+                    <h2 class="text-xl font-semibold">LinkedIn</h2>\
+                    <i class="fab fa-linkedin-in text-2xl text-blue-800"></i>\
+                </div>\
+                <!-- Tabs -->\
+                <div class="flex bg-gray-200 dark:bg-gray-700 rounded-lg p-1 mb-4 tab-container">\
+                    <button class="tab-btn active w-1/2 rounded-md py-1 text-sm font-medium" data-target="li-personal">Personal</button>\
+                    <button class="tab-btn w-1/2 rounded-md py-1 text-sm font-medium" data-target="li-page">Page</button>\
+                </div>\
+                <!-- Tab Content -->\
+                <div id="li-personal" class="tab-content">\
+                    <div class="mt-2"><p class="text-4xl font-bold">1,550</p><p class="text-gray-500 dark:text-gray-400">Connections</p></div>\
+                    <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                        <div><p class="font-semibold">Posts</p><p>98</p></div>\
+                        <div><p class="font-semibold">Post Views</p><p>15.7K</p></div>\
+                    </div>\
+                </div>\
+                <div id="li-page" class="tab-content hidden">\
+                    <div class="mt-2"><p class="text-4xl font-bold">3,204</p><p class="text-gray-500 dark:text-gray-400">Page Followers</p></div>\
+                    <div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 flex justify-between text-sm">\
+                        <div><p class="font-semibold">Impressions</p><p>45.1K</p></div>\
+                        <div><p class="font-semibold">CTR</p><p>2.8%</p></div>\
+                    </div>\
+                </div>\
+            </div>\
+            \
+            <!-- Add New Card -->\
+            <div class="border-2 border-dashed dark:border-gray-600 rounded-lg flex flex-col items-center justify-center text-center p-6 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">\
+                <i class="fas fa-plus text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>\
+                <h2 class="text-xl font-semibold text-gray-600 dark:text-gray-400">Add New</h2>\
+                <p class="text-gray-500 dark:text-gray-500">Connect another platform</p>\
+            </div>\
+\
+        </div>\
+    </div>\
+\
+    <script>\
+        // JavaScript for Tab Functionality\
+        const tabContainers = document.querySelectorAll('.tab-container');\
+\
+        tabContainers.forEach(container => \{\
+            const tabs = container.querySelectorAll('.tab-btn');\
+            const card = container.closest('.bg-white'); // Find the parent card\
+            const contents = card.querySelectorAll('.tab-content');\
+\
+            tabs.forEach(tab => \{\
+                tab.addEventListener('click', () => \{\
+                    // Remove active class from all tabs in this container\
+                    tabs.forEach(item => item.classList.remove('active'));\
+                    // Add active class to the clicked tab\
+                    tab.classList.add('active');\
+\
+                    const targetId = tab.dataset.target;\
+                    const targetContent = document.getElementById(targetId);\
+\
+                    // Hide all content sections in this card\
+                    contents.forEach(content => content.classList.add('hidden'));\
+                    // Show the target content section\
+                    if (targetContent) \{\
+                        targetContent.classList.remove('hidden');\
+                    \}\
+                \});\
+            \});\
+        \});\
+    </script>\
+\
+</body>\
+</html>\
+}
